@@ -1,0 +1,53 @@
+La empresa de manufactura "ACME", necesita un nuevo control para gestionar su inventario por el área correspondiente, últimamente el turno de la tarde parece "multiplicar" la producción por las noches cuando sale el supervisor, lo cual ha generado pérdidas en la empresa.
+
+Ahora, necesitan añadir accesos para registrar la producción diaria, para ello necesitan un sistema protegido por contraseña de al menos 6 caracteres, de 3 letras, al menos 1 mayúsculas y 3 números que no sean consecutivos. Deberá poner un mensaje que diga que se debe llamar al supervisor si la contraseña es incorrecta, de lo contrario, deberá mostrar un mensaje de bienvenida.
+
+Una vez ingresado el sistema, deberá poder registrar las piezas fabricadas, para ello, el sistema deberá pedir la cantidad de piezas que se quieren añadir y permitir el registro, el supervisor deberá poder ingresar todas las piezas que requiera y para terminar el ingreso deberá ingresar 4 ceros consecutivos.
+
+Al terminar, deberá mostrar la suma total de las piezas fabricadas, si el total de esas ventas es mayor a 10,000 unidades deberá mostrar un mensaje de que se ha cumplido la meta, de lo contrario, deberá mostrar una alerta para producción.
+
+Algoritmo acceso
+	Escribir "ingresa la contraseña"
+	leer cont
+	
+	Mientras cont <> "jaP357" Hacer
+        Escribir "contraseña incorrecta se debe llamar al supervisor:"
+        Leer cont
+    FinMientras
+	
+	Escribir "acceso concedido"
+	
+	Escribir "cuantas piezas seran añadidas (0000 para salir)"
+	leer p
+	
+	suma=0
+	
+	Mientras p <> 0000 Hacer
+        suma <- suma + p
+        Escribir "Ingresa otra pieza (0000 para salir):"
+        Leer p
+    FinMientras
+	
+	escribir "la suma total de las piezas es: ",suma
+	si suma > 10000 Entonces
+		escribir "bien se ah cumplido la meta"
+	SiNo
+		escribir "alerta en la produccion"
+	FinSi
+FinAlgoritmo
+
+*** Ejecución Iniciada. ***
+ingresa la contraseña
+> jaP357
+acceso concedido
+cuantas piezas seran añadidas (0000 para salir)
+> 2
+Ingresa otra pieza (0000 para salir):
+> 2332
+Ingresa otra pieza (0000 para salir):
+> 2323
+Ingresa otra pieza (0000 para salir):
+> 0000
+la suma total de las piezas es: 4657
+alerta en la produccion
+*** Ejecución Finalizada. ***
