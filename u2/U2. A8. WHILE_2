@@ -1,0 +1,145 @@
+La abarrotera "Kamarena" necesita trabajar en un sistema que le ayude a registrar de manera fácil y rápida todos sus pedidos, hubo una explosión en el mercado al otro lado de la ciudad y ellos han quedado como el único lugar disponible para comprar, esa idea de poner una bomba ha salido terriblemente bien (no hubo ningún herido).
+
+Mientras el dueño sigue luchando entre entregarse a las autoridades por lo sucedido y pedir perdón a las familias involucradas, ha pedido a su asesor externo, el "Teclas" que le ayude con un sistema.
+
+Para ingresar al sistema debe pedir una contraseña (Mientras), que debe ser una fecha de nacimiento en formato YYYY-MM-DD, una vez en el sistema, debe preguntar si (Si) quiere hacer registros de zanahorias o de tomates.
+
+Si elige zanahorias, deberá pedir que se ingresen cuántas cajas deberá ingresar (Para), como cada caja tiene un valor diferente, habrá que ingresarlo manualmente una por una.
+
+Si elige tomates, deberá ingresar cuantas cajas se necesiten y cuando escriba el número 100001 deberá terminar de registrar (Mientras).
+
+En ambos casos, deberá qué opción se eligió y mostrar cuántas cajas se añadieron, cuánto fue el total del peso y cuánto fue el costo total de esa venta, las zanahorias cuestan $15.84 el kilo y los tomates cuestan $11.34 el kilo, si (Si) la venta supera los $10,000, se le hará un descuento automático del 7.5% del valor total.
+
+Finalmente, deberá preguntar si (Si) el cliente necesita o no envío, si requiere envío deberá añadir $150 más a su pedido, de lo contrario, mostrará el precio anterior.
+
+
+Algoritmo abarrotera_kamarena
+	Escribir "ingresa la contraseña"
+	leer cont
+	
+	mientras cont <> "2000/06/21" Hacer
+		Escribir "contraseña incorrecta, vuelva a ingresar la contraseña"
+		leer cont
+	FinMientras
+	
+	escribir "bienvenido a abarrotes kamarena"
+	
+	Escribir "ingrese lo que va a registrar (1) zanahorias (2) tomates"
+	Leer tz
+	
+	suma=0
+	cost=0
+	si tz = 1 Entonces
+		escribir "cuantas cajas de zanahoria se van a necesitar"
+		leer cj
+		
+		para i=1 Hasta cj
+			escribir "ingrese cuantos kg pesa de la caja ", i,":"
+			leer kg
+			
+			suma=suma+kg
+			val_caja=kg*15.84
+			
+			escribir "el valor de la caja es de $",val_caja
+			
+			cost=cost+val_caja
+			
+		FinPara
+		
+		Escribir "usted ingreso cajas de zanahoria"
+		Escribir "cajas ingresadas: ",cj
+		Escribir "el peso total fue de: ",suma, " kg."
+		Escribir "el precio total fue de $",cost
+		des=cost*0.75
+		si cost >=10000 Entonces
+			Escribir "se le a agregado un descuento del 7.5% ahora su cuenta es de: $",des
+			escribir "necesita envio"
+			leer en
+			cost_fi=des+150
+			si en = "si" Entonces
+				Escribir "el envio tiene un costo de: $150"
+				Escribir "su cuenta final seria de: $",cost_fi
+			FinSi
+		SiNo
+			cost_en=cost+150
+			si cost < 10000 Entonces
+				Escribir "necesita envio"
+				leer l
+				si l = "si" Entonces
+					Escribir "el envio tiene un costo de: $150"
+					Escribir "su cuenta final seeria de: $",cost_en
+				FinSi
+			FinSi
+		FinSi
+		
+		
+		
+	FinSi
+	
+	peso_cajs=10
+	precio=11.34
+	si tz = 2 Entonces
+		escribir "cuantas cajas de (10kg) tomate se necesitan "
+		leer c
+		
+		peso=peso_cajs*c
+		precio_tot=precio*peso
+		
+		Escribir "usted ingreso cajas de tomate"
+		Escribir "cajas ingresadas: ",c
+		Escribir "el peso total fue de: ",peso, " kg."
+		Escribir "el precio total fue de $",precio_tot
+		precio_des=precio_tot*0.75
+		env=precio_des+150
+		si precio_tot >=10000 Entonces
+			Escribir "se le a agregado un descuento del 7.5% ahora su cuenta es de: $",precio_des
+		    escribir "necesita envio"
+			leer f
+			si f = "si" Entonces
+				Escribir "el envio tiene un costo de $150"
+				Escribir"su cuenta final es de: $",env
+			FinSi
+		FinSi
+		envi=precio_tot+150
+		si precio_tot < 10000 Entonces
+			Escribir "necesita envio"
+			leer m
+			si m = "si" Entonces
+				Escribir "el envio tiene un costo de: $150"
+				Escribir "su cuenta final seeria de: $",envi
+			FinSi
+		FinSi
+		mientras c<> 100001 Hacer
+			Escribir "ingresa (100001) para salir"
+			leer c
+		FinMientras
+		
+		
+	FinSi
+	
+	
+	
+FinAlgoritmo
+
+*** Ejecución Iniciada. ***
+ingresa la contraseña
+> 2000/06/21
+bienvenido a abarrotes kamarena
+ingrese lo que va a registrar (1) zanahorias (2) tomates
+> 1
+cuantas cajas de zanahoria se van a necesitar
+> 2
+ingrese cuantos kg pesa de la caja 1:
+> 17
+el valor de la caja es de $269.28
+ingrese cuantos kg pesa de la caja 2:
+> 19
+el valor de la caja es de $300.96
+usted ingreso cajas de zanahoria
+cajas ingresadas: 2
+el peso total fue de: 36 kg.
+el precio total fue de $570.24
+necesita envio
+>
+*** Ejecución Finalizada. ***
+
