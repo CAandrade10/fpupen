@@ -1,0 +1,46 @@
+Diseña un algoritmo que emplee subprogramas / funciones / subprocesos, para calcular el área y volumen de 3 figuras geométricas diferentes. 
+
+El usuario debe poder elegir cuál figura desea calcular y mostrar sus resultados, el programa debe poder repetirse si el usuario lo desea y elegir otra opción.
+
+
+SubProceso calcubo(num)
+    Si num = 1 Entonces
+escribir "usted desea calcular el area y volumen de un cubo"
+        Escribir "ingrese cuamto mide su lado"
+        leer la
+area= 6*(la*la)
+volu=(la*la*la)
+escribir " el area del cubo es: ",area
+escribir " el volumen del cubo es: ",volu
+FinSi
+FinSubProceso
+
+SubProceso calcesfera(num)
+    Si num = 2 Entonces
+escribir "usted desea calcular el area y volumen de una esfera"
+        Escribir "ingrese cuamto mide su radio"
+        leer r
+are= 4*3.1416*(r*r)
+vol= 4/3*3.1416*(r*r*r)
+Escribir "el area de la esfera es de: ",are
+Escribir "el volumen de la esfera es de: ",vol
+FinSi
+FinSubProceso
+
+SubProceso cal(num)
+    Si num = 2 Entonces
+escribir "usted desea calcular el area y volumen de un triungulo"
+        Escribir "ingrese cuamto mide su altura"
+        leer alt
+Escribir "ingrese cuanto mide su base"
+leer ba
+FinSi
+FinSubProceso
+
+Algoritmo EjemploIF2
+    Escribir "Ingrese que figura quiere calcular (1)cuadrado (2)triangulo (3)rectangulo"
+    Leer x
+    calcubo(x)
+calcesfera(x)
+cal(x)
+FinAlgoritmo
