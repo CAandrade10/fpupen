@@ -28,7 +28,7 @@ descripcion de la materia: en esta materia aprendi un poco sobre la progrmacion 
 descripcion breve de la unidad: en esta unidad aprendi los conceptos basicos sobre la programacion y a conocer el lenguaje pseint.
 
 
-[Ir a Unidad 2](https://github.com/MRsantiago701/INDP/tree/main/U1)
+[Ir a Unidad 2](https://github.com/CAandrade10/fpupen/commit/2fdb600eada47b44192b432b48f2aa1b6c8840e4)
 
 [Ir a Unidad 3](https://github.com/MRsantiago701/INDP/tree/main/U1)
 
