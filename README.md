@@ -30,7 +30,16 @@ descripcion breve de la unidad: en esta unidad aprendi los conceptos basicos sob
 
 [Ir a Unidad 2](https://github.com/CAandrade10/fpupen/commit/2fdb600eada47b44192b432b48f2aa1b6c8840e4)
 
-[Ir a Unidad 3](https://github.com/MRsantiago701/INDP/tree/main/U1)
+
+descripcion breve de la unidad: en esta unidad aprendi a implementar el if, for, while en pseint.
+
+
+[Ir a Unidad 3](https://github.com/CAandrade10/fpupen/commit/aca626b3c9d5d28771cd648d9c988fce6649cc9b)
+
+
+descripcion breve de la unidad: en esta unidad aprendi a implementar subalgoritmos en pseint y utilizar la plataforma github para dar a conocer mis codigos.
+
+
 
 
 
